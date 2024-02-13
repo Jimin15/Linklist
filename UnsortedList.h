@@ -55,10 +55,18 @@ public:
   //       item is a copy of element at current position.
 
 private:
+
+  struct Node{
+      T value;
+      Node* next;
+  };
   int length;
+  Node* head;
+  Node* it;
 
   // Need to create the head... and a node definition
   // Also need something to track the iterator position
+    void PutItem(T item);
 };
 
 #include "UnsortedList.cpp"
